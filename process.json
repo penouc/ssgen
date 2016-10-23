@@ -1,0 +1,19 @@
+{
+  "apps": [
+        {
+            "name": "ssgen",
+            "script": "npm",
+            "args": "start",
+            "watch": "./",
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "autorestart": true,
+            "restart_delay": 1000,
+            "post_update"  : ["App has been updated, running npm install...",
+                              "npm install",
+                              "App is being restarted now"],
+          "exec_timeout"       : 30000
+        }
+    ]
+}
