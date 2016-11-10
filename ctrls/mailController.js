@@ -12,7 +12,7 @@ var transporter = nodemailer.createTransport({
     },
     logger: true, // log to console
     debug: true, // include SMTP traffic in the logs
-    // proxy: 'socks5://localhost:1080'
+    proxy: 'socks5://localhost:1080'
 }, {
     // default message fields
 

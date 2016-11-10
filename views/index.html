@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>ssgen-views</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闪豆索克斯</title>
+</head>
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+<style>
+	body {
+		background-image: url('images/bg.jpg');
+		background-size: cover;
+	}
+
+	#mail{
+		display: inline-block;
+	    padding: 0 10px;
+	    margin: 0;
+	    border: none;
+	    border-radius: 5px;
+	    height: 24px;
+	    width: 240px;
+	    line-height: 48px;
+	}
+
+	#submit{
+	    display: inline-block;
+	    height: 24px;
+	    width: 40px;
+	    border: none;
+	    border-radius: 4px;
+	    background-color: #eee;
+	    cursor: pointer;
+	}
+</style>
+<body>
+	<input id="mail" type="text">
+	<button id="submit">OK</button>
+</body>
+<script type="text/javascript">
+  var $subbtn = $('#submit'),
+      $mailElm   = $('#mail');
+
+  $subbtn.on('click',function(e){
+    var mail = $mailElm.val()
+    if(!mail){
+      alert('请输入邮箱')
+      return 
+    }
+
+    $.get('/sendMail/' + mail, function(res){
+      alert(res + '注册成功，请检查邮箱！');
+      $subbtn[0].setAttribute('disabled', 'disabled');
+    })
+  })
+</script>
 </html>

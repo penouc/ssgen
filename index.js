@@ -6,7 +6,7 @@ var ssClient   = require('./ctrls/ssClient')
 
 var app = express()
 
-app.use(express.static(__dirname + '/views/dist', {
+app.use(express.static(__dirname + '/views', {
 	index: 'index.html'
 }));
 
