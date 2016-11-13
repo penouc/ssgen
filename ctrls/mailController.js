@@ -90,7 +90,7 @@ function sendMail(toMail, config, res){
             res.send('注册失败！');
             return;
         }
-        res.send(toMail + '这册成功!');
+        res.send(toMail + '这册成功, 请检查邮箱');
         console.log('Message sent successfully!');
         console.log('Server responded with "%s"', info.response);
     });

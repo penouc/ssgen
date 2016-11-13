@@ -48,7 +48,7 @@
     }
 
     $.get('/sendMail/' + mail, function(res){
-      alert(res + '注册成功，请检查邮箱！');
+      alert(res);
       $subbtn[0].setAttribute('disabled', 'disabled');
     })
   })
