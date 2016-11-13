@@ -78,7 +78,7 @@ function getMessage(){
 
 
 
-function sendMail(toMail, config){
+function sendMail(toMail, config, res){
     console.log('Sending Mail');
     var message = getMessage();
     message.to    = '"dear"<' + toMail + '>';
@@ -87,8 +87,10 @@ function sendMail(toMail, config){
         if (error) {
             console.log('Error occurred');
             console.log(error.message);
+            res.send('注册失败！');
             return;
         }
+        res.send(toMail + '这册成功!');
         console.log('Message sent successfully!');
         console.log('Server responded with "%s"', info.response);
     });

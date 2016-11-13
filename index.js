@@ -13,8 +13,8 @@ app.use(express.static(__dirname + '/views', {
 app.get('/sendMail/:id', function(req, res){
 	console.log(req.params.id)
 	var config = ssClient.addUser();
-	transMail.sendMail(req.params.id, config);
-	res.send('user ' + req.params.id);
+	transMail.sendMail(req.params.id, config, res);
+	// res.send('user ' + req.params.id);
 })
 
 app.listen(3456, function(err){
