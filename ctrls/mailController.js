@@ -33,38 +33,36 @@ function getMessage(){
         to: '"dear" <446725453@qq.com>',
 
         // Subject of the message
-        subject: 'Nodemailer is unicode friendly ✔', //
+        subject: '谢谢注册shadowsocks，目前只有针对iPhone用户的教程', //
 
         // plaintext body
-        text: 'Hello to myself!',
+        text: '',
 
         // HTML body
-        html: `<p><b>Hello</b> to myself <img src="cid:note@example.com"/></p>
-               <p>Here\'s a nyan cat for you as an embedded attachment:<br/><img src="cid:nyan@example.com"/></p>
-               #config#`,
+        html: ``,
 
         // Apple Watch specific HTML body
-        watchHtml: '<b>Hello</b> to myself',
+        watchHtml: '<b>Shadowsocks</b>安装使用教程',
 
         // An array of attachments
         attachments: [
 
             // String attachment
-            {
-                filename: '',
-                content: 'Some notes about this e-mail',
-                contentType: 'text/plain' // optional, would be detected from the filename
-            },
+            // {
+            //     filename: '',
+            //     content: 'Some notes about this e-mail',
+            //     contentType: 'text/plain' // optional, would be detected from the filename
+            // },
 
-            // Binary Buffer attachment
-            {
-                filename: 'image.png',
-                content: new Buffer('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEUAAAD/' +
-                    '//+l2Z/dAAAAM0lEQVR4nGP4/5/h/1+G/58ZDrAz3D/McH8yw83NDDeNGe4U' +
-                    'g9C9zwz3gVLMDA/A6P9/AFGGFyjOXZtQAAAAAElFTkSuQmCC', 'base64'),
+            // // Binary Buffer attachment
+            // {
+            //     filename: 'image.png',
+            //     content: new Buffer('iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEUAAAD/' +
+            //         '//+l2Z/dAAAAM0lEQVR4nGP4/5/h/1+G/58ZDrAz3D/McH8yw83NDDeNGe4U' +
+            //         'g9C9zwz3gVLMDA/A6P9/AFGGFyjOXZtQAAAAAElFTkSuQmCC', 'base64'),
 
-                cid: 'note@example.com' // should be as unique as possible
-            },
+            //     cid: 'note@example.com' // should be as unique as possible
+            // },
 
             // // File Stream attachment
             // {
@@ -74,6 +72,7 @@ function getMessage(){
             // }
         ]
     };
+
     return message
 }
 
